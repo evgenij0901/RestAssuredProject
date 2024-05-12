@@ -22,7 +22,7 @@ public class PetTests {
     }
 
     @Test
-    public void addCorrectDataPet_Success() {
+    public void create_AddPetWithCorrectData_Success(){
         //arrange
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
 
@@ -34,6 +34,20 @@ public class PetTests {
         Assertions.assertAll(
                 ()->Assertions.assertEquals(petDTO.getName(), responsePet.getName()),
                 ()->Assertions.assertEquals(200, response.statusCode())
+        );
+    }
+    @Test
+    public void create_AddPetWithIncorrectData_StatusCode400(){
+        //arrange
+        PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+
+        //act
+        Response response = petService.addPetWithIncorrectBody(petDTO.toString());
+
+        //assert
+        Assertions.assertAll(
+                ()->Assertions.assertEquals(response.then().extract().body().jsonPath().get("message"), "bad input"),
+                ()->Assertions.assertEquals(400, response.statusCode())
         );
     }
 }

@@ -23,6 +23,17 @@ public class PetService extends BaseService{
                 .then()
                 .spec(responseSpec)
                 .extract().response();
+    }
 
+    public Response addPetWithIncorrectBody(String body)  {
+
+        return given()
+                .spec(requestSpec)
+                .when()
+                .body(body)
+                .post(basePath)
+                .then()
+                .spec(responseSpec)
+                .extract().response();
     }
 }
