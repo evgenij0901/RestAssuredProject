@@ -13,6 +13,7 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation ("io.rest-assured:rest-assured:5.4.0")
+    implementation ("io.rest-assured:json-schema-validator:5.4.0")
     implementation("net.datafaker:datafaker:2.2.2")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
     compileOnly("org.projectlombok:lombok:1.18.32")
