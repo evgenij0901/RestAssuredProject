@@ -7,13 +7,12 @@ import java.util.Date;
 @Setter
 @Builder
 @AllArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 public class OrderDTO {
     private int id;
     private int petId;
     private int quantity;
-    private Date shipDate;
+    private String shipDate;
     private String status;
     private boolean complete;
 }

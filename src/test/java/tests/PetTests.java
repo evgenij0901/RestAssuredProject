@@ -5,10 +5,14 @@ import factories.PetFactory;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import models.PetDTO;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import services.PetService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PetTests {
     private PetService petService;
     private PetFactory petFactory;
+    private final List<Integer> petIdsForDelete = new ArrayList<>();
 
     @BeforeAll
     public void initServices(){
@@ -28,6 +33,7 @@ public class PetTests {
     public void create_AddPetWithCorrectData_Success(){
         //arrange
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
 
         //act
         Response response = petService.addPet(petDTO);
@@ -44,6 +50,7 @@ public class PetTests {
         //arrange
         String jsonSchemaPath = "PetSchema.json";
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
 
         //act
         Response response = petService.addPet(petDTO);
@@ -64,7 +71,7 @@ public class PetTests {
 
         //assert
         assertAll(
-                ()-> assertEquals(response.then().extract().body().jsonPath().get("message"), "bad input"),
+                ()-> assertEquals("bad input", response.then().extract().body().jsonPath().get("message")),
                 ()-> assertEquals(400, response.statusCode())
         );
     }
@@ -72,6 +79,7 @@ public class PetTests {
     public void read_GetExistingPet_Success(){
         //arrange
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
         petService.addPet(petDTO);
 
         //act
@@ -89,6 +97,7 @@ public class PetTests {
         //arrange
         String jsonSchemaPath = "PetSchema.json";
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
         petService.addPet(petDTO);
 
         //act
@@ -108,7 +117,7 @@ public class PetTests {
 
         //assert
         assertAll(
-                ()-> assertEquals(response.then().extract().body().jsonPath().get("message"), "Pet not found"),
+                ()-> assertEquals("Pet not found", response.then().extract().body().jsonPath().get("message")),
                 ()-> assertEquals(404, response.statusCode())
         );
     }
@@ -117,6 +126,7 @@ public class PetTests {
         //arrange
         String imgPath = "resources/image.png";
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
         petService.addPet(petDTO);
 
         //act
@@ -134,6 +144,7 @@ public class PetTests {
         //arrange
         String newPetName = "Pet1";
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
         petService.addPet(petDTO);
         petDTO.setName(newPetName);
 
@@ -149,6 +160,7 @@ public class PetTests {
         //arrange
         String jsonSchemaPath = "PetSchema.json";
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
         petService.addPet(petDTO);
         petDTO.setName("Pet1");
 
@@ -165,6 +177,7 @@ public class PetTests {
     public void update_UpdateExistingPetWithParam_StatusCode200(){
         //arrange
         PetDTO petDTO = petFactory.getBasicPetWithCorrectData();
+        petIdsForDelete.add(petDTO.getId());
         petService.addPet(petDTO);
 
         //act
@@ -209,5 +222,9 @@ public class PetTests {
 
         //assert
         assertEquals(404, response.statusCode());
+    }
+    @AfterAll
+    public void tearDown(){
+        petIdsForDelete.forEach(p->petService.deletePet(p));
     }
 }

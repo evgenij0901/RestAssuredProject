@@ -13,7 +13,7 @@ public class OrderFactory {
                 .id(faker.number().positive())
                 .petId(faker.number().positive())
                 .quantity(faker.number().numberBetween(1, 3))
-                .shipDate(faker.date().future(2, TimeUnit.DAYS, new Date()))
+                .shipDate("2024-05-20T17:34:45.655Z")
                 .status("placed")
                 .complete(faker.bool().bool()).build();
     }
