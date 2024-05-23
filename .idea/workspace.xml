@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d95b85f5-0f4a-49f8-a6ff-cb6f39fe6aaa" name="Changes" comment="add some pet test and services">
-      <change afterPath="$PROJECT_DIR$/src/test/java/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/OrderTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/OrderSchema.json" afterDir="false" />
+    <list default="true" id="d95b85f5-0f4a-49f8-a6ff-cb6f39fe6aaa" name="Changes" comment="add Order test and services">
+      <change afterPath="$PROJECT_DIR$/src/test/java/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UserTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/UserSchema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/factories/OrderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/factories/OrderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PetTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,18 +62,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "evgenij0901"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;evgenij0901&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/evgenij0901/RestAssuredProject.git",
-    "accountId": "f4a1b11d-71d9-41eb-ac04-b2a35ae0a1a8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/evgenij0901/RestAssuredProject.git&quot;,
+    &quot;accountId&quot;: &quot;f4a1b11d-71d9-41eb-ac04-b2a35ae0a1a8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -89,51 +86,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build RestAssuredProject.executor": "Run",
-    "Gradle.OrderTests.create_AddOrderWithIncorrectBody_StatusCode405.executor": "Run",
-    "Gradle.OrderTests.create_AddOrder_Success.executor": "Run",
-    "Gradle.OrderTests.delete_DeleteExistingOrder_Success.executor": "Run",
-    "Gradle.OrderTests.delete_DeleteNotExistingOrder_StatusCode404.executor": "Run",
-    "Gradle.OrderTests.executor": "Run",
-    "Gradle.OrderTests.read_GetExistingOrder_SchemaIsValid.executor": "Run",
-    "Gradle.OrderTests.read_GetExistingOrder_Success.executor": "Run",
-    "Gradle.OrderTests.read_GetInventory_Success.executor": "Run",
-    "Gradle.OrderTests.read_GetNotExistingOrder_StatusCode404.executor": "Run",
-    "Gradle.PetTests.addCorrectDataPet_Success.executor": "Run",
-    "Gradle.PetTests.create_AddPetAndAssertResponseWithJsonSchema_Success.executor": "Run",
-    "Gradle.PetTests.create_AddPetWithCorrectData_Success.executor": "Run",
-    "Gradle.PetTests.create_AddPetWithIncorrectData_StatusCode400.executor": "Run",
-    "Gradle.PetTests.create_AddPetWithIncorrectData_StatusCode405.executor": "Run",
-    "Gradle.PetTests.delete_DeleteExistingPet_Success.executor": "Run",
-    "Gradle.PetTests.delete_DeleteNotExistingPet_StatusCode404.executor": "Run",
-    "Gradle.PetTests.executor": "Run",
-    "Gradle.PetTests.read_GetExistingPetAndAssertSchema_SchemaIsValid.executor": "Run",
-    "Gradle.PetTests.read_GetExistingPet_Success.executor": "Run",
-    "Gradle.PetTests.read_GetNotExistingPet_StatusCode404.executor": "Run",
-    "Gradle.PetTests.update_UpdateExistingPetWithParam_StatusCode200.executor": "Run",
-    "Gradle.PetTests.update_UpdateExistingPet_SchemaIsValid.executor": "Run",
-    "Gradle.PetTests.update_UpdateExistingPet_Success.executor": "Run",
-    "Gradle.PetTests.update_UpdateNotExistingPet_StatusCode404.executor": "Run",
-    "Gradle.PetTests.update_UploadFileOnExistingPet_Success.executor": "Run",
-    "Gradle.RestAssuredProject [compileJava].executor": "Run",
-    "Gradle.RestAssuredProject [javadoc].executor": "Run",
-    "JAR Application.lombok-1.18.32.jar.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/evgenijstolarov/Documents/JavaProjects/RestAssuredProject/src/test/resources",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5448276",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build RestAssuredProject.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.create_AddOrderWithIncorrectBody_StatusCode405.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.create_AddOrder_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.delete_DeleteExistingOrder_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.delete_DeleteNotExistingOrder_StatusCode404.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.read_GetExistingOrder_SchemaIsValid.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.read_GetExistingOrder_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.read_GetInventory_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderTests.read_GetNotExistingOrder_StatusCode404.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.addCorrectDataPet_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.create_AddPetAndAssertResponseWithJsonSchema_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.create_AddPetWithCorrectData_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.create_AddPetWithIncorrectData_StatusCode400.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.create_AddPetWithIncorrectData_StatusCode405.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.delete_DeleteExistingPet_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.delete_DeleteNotExistingPet_StatusCode404.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.read_GetExistingPetAndAssertSchema_SchemaIsValid.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.read_GetExistingPet_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.read_GetNotExistingPet_StatusCode404.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.update_UpdateExistingPetWithParam_StatusCode200.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.update_UpdateExistingPet_SchemaIsValid.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.update_UpdateExistingPet_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.update_UpdateNotExistingPet_StatusCode404.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PetTests.update_UploadFileOnExistingPet_Success.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RestAssuredProject [compileJava].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RestAssuredProject [javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.lombok-1.18.32.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/evgenijstolarov/Documents/JavaProjects/RestAssuredProject/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5448276&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
@@ -143,8 +140,8 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrderTests">
-    <configuration name="OrderTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.OrderTests.create_AddOrder_Success">
+    <configuration name="OrderTests.create_AddOrder_Success" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +154,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.OrderTests&quot;" />
+            <option value="&quot;tests.OrderTests.create_AddOrder_Success&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -265,7 +262,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.OrderTests" />
+      <item itemvalue="Gradle.OrderTests.create_AddOrder_Success" />
       <item itemvalue="Gradle.OrderTests.delete_DeleteExistingOrder_Success" />
       <item itemvalue="Gradle.OrderTests.delete_DeleteNotExistingOrder_StatusCode404" />
       <item itemvalue="Gradle.OrderTests.read_GetExistingOrder_SchemaIsValid" />
@@ -273,11 +270,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OrderTests" />
-        <item itemvalue="Gradle.OrderTests.delete_DeleteNotExistingOrder_StatusCode404" />
-        <item itemvalue="Gradle.OrderTests.delete_DeleteExistingOrder_Success" />
+        <item itemvalue="Gradle.OrderTests.create_AddOrder_Success" />
         <item itemvalue="Gradle.OrderTests.read_GetNotExistingOrder_StatusCode404" />
         <item itemvalue="Gradle.OrderTests.read_GetExistingOrder_SchemaIsValid" />
+        <item itemvalue="Gradle.OrderTests.delete_DeleteNotExistingOrder_StatusCode404" />
+        <item itemvalue="Gradle.OrderTests.delete_DeleteExistingOrder_Success" />
       </list>
     </recent_temporary>
   </component>
@@ -314,13 +311,22 @@
       <option name="project" value="LOCAL" />
       <updated>1716030453608</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add Order test and services">
+      <option name="closed" value="true" />
+      <created>1716304357004</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716304357004</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="add 1 test" />
     <MESSAGE value="add some pet test and services" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some pet test and services" />
+    <MESSAGE value="add Order test and services" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Order test and services" />
   </component>
 </project>
