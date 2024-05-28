@@ -79,7 +79,7 @@ public class UserService extends BaseService{
                 .pathParam("username", username)
                 .pathParam("password", password)
                 .when()
-                .get(basePath + "/login")
+                .get(basePath + "/login?{username}&{password}")
                 .then()
                 .spec(responseSpec)
                 .extract()

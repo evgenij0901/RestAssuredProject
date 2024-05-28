@@ -13,7 +13,7 @@ public class UserFactory {
                 .lastName(faker.name().lastName())
                 .email(faker.internet().emailAddress())
                 .password(faker.internet().password())
-                .phone(faker.phoneNumber().toString())
+                .phone("+79110887563")
                 .userStatus(0).build();
     }
 }

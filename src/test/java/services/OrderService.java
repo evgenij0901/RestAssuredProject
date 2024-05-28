@@ -2,7 +2,6 @@ package services;
 
 import io.restassured.response.Response;
 import models.OrderDTO;
-import models.PetDTO;
 
 import static io.restassured.RestAssured.given;
 
